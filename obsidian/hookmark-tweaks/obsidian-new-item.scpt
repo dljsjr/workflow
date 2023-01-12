@@ -94,7 +94,7 @@ if prefUrl is "obsidian-advanced-URI" then
 
 	set callbackURL to theString's stringByAddingPercentEncodingWithAllowedCharacters:charset
 
-	set myURL to "obsidian://advanced-uri?filepath=" & destinationFolder & encodedTitle & fileType & "&data=[" & encodedTitle & "](" & encodedLink & ")&mode=new&x-success=" & callbackURL & "&x-error=" & callbackURLError
+	set myURL to "obsidian://advanced-uri?filepath=" & destinationFolder & encodedTitle & fileType & "&data=%253C%2525tp.file.include%2528%2522%255B%255B_BasicNote%255D%255D%2522%2529%2525%253E%250A[" & encodedTitle & "](" & encodedLink & ")&mode=new&x-success=" & callbackURL & "&x-error=" & callbackURLError
 	set myScript to "open " & quoted form of myURL
 
 	do shell script myScript
